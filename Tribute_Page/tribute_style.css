@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:ital,wght@1,300&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  position: absolute;
+  color: #000;
+  margin: 1vw 0.5vw;
+  padding: 1vw 1vw;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #ccc, #fff);
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title h1 {
+  margin: 2vw 1vw 0.5vw;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 50px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+#title h3 {
+  font-family: Poppins, cursive;
+  font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0vw;
+}
+#img-div #image {
+  width: 90vw;
+  height: 120vh;
+  margin: 1vw auto 1vw;
+  border-radius: 20px;
+}
+
+#img-div #img-caption {
+  margin: 1vw auto 1vw;
+  font-family: Poppins, cursive;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+#tribute-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tribute-info #work-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 35px;
+  text-decoration: underline;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  margin: 5vw auto 3vw;
+}
+
+#tribute-info #work {
+  margin: 0vw 2vw 2vw;
+  padding: 2vw 2vw;
+  font-family: Poppins, cursive;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#tribute-info #work #info-year {
+  width: 30%;
+  margin: 1vw 0vw 0vw;
+  border-bottom: 2px solid black;
+}
+
+#tribute-info #work li {
+  margin: 1vw 0vw 0vw 5vw;
+  list-style: none;
+}
+
+#tribute-info #award-title {
+  margin: 2vw 0vw 3vw;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 35px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+
+#tribute-info #awards {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, sans-serif;
+  font-size: 17px;
+  justify-content: start;
+  margin: 0vw 2vw 2vw;
+  padding: 2vw 1vw;
+}
+
+#tribute-info #awards li {
+  margin: 1vw 0vw;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  list-style: none;
+}
+
+#tribute-info #awards li::before {
+  content: "\1F680";
+  margin: 0vw 1vw;
+}
+
+#tribute-info #tribute-link {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin: 1vw 0vw 2vw;
+}
+
+#tribute-info #tribute-link a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.5s;
+}
+
+#tribute-info #tribute-link a:hover {
+  font-size: 30px;
+}
+
+#dev-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw 0vw 0.5vw;
+  font-family: Poppins, cursive;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+#dev-detail a {
+  text-decoration: none;
+  transition: 0.5s;
+  color: #555;
+}
+
+#dev-detail a:hover {
+  font-size: 25px;
+}
+
+/* Phone*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #title h1 {
+    font-size: 30px;
+  }
+  #title h3 {
+    font-size: 17px;
+  }
+  #img-div #img-caption {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 11px;
+  }
+  #tribute-info #work-title {
+    font-size: 12px;
+  }
+  #tribute-info #work {
+    font-size: 8px;
+  }
+  #tribute-info #award-title {
+    font-size: 12px;
+  }
+  #tribute-info #awards li {
+    font-size: 7px;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+  }
+  #tribute-info #tribute-link {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 10px;
+  }
+  #tribute-info #tribute-link a:hover {
+    font-size: 12px;
+  }
+  #dev-detail {
+    font-size: 10px;
+  }
+  #dev-detail a:hover {
+    font-size: 12px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #title h1 {
+    font-size: 35px;
+  }
+  #title h3 {
+    font-size: 20px;
+  }
+  #img-div #img-caption {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 10px;
+  }
+  #tribute-info #work-title {
+    font-size: 25px;
+  }
+  #tribute-info #work {
+    font-size: 12px;
+  }
+  #tribute-info #award-title {
+    font-size: 25px;
+  }
+  #tribute-info #awards li {
+    font-size: 12px;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+  }
+  #tribute-info #tribute-link {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 16px;
+  }
+  #tribute-info #tribute-link a:hover {
+    font-size: 20px;
+  }
+  #dev-detail {
+    font-size: 12px;
+  }
+  #dev-detail a:hover {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  #title h1 {
+    font-size: 40px;
+  }
+  #title h3 {
+    font-size: 21px;
+  }
+  #img-div #img-caption {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 13px;
+  }
+  #tribute-info #work-title {
+    font-size: 35px;
+  }
+  #tribute-info #work {
+    font-size: 15px;
+  }
+  #tribute-info #award-title {
+    font-size: 35px;
+  }
+  #tribute-info #awards li {
+    font-size: 16px;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+  }
+  #tribute-info #tribute-link {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-size: 24px;
+  }
+  #tribute-info #tribute-link a:hover {
+    font-size: 30px;
+  }
+  #dev-detail {
+    font-size: 15px;
+  }
+  #dev-detail a:hover {
+    font-size: 25px;
+  }
+}
