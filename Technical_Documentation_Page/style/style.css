@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.7%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins;
+}
+
+#main-doc {
+  width: 100%;
+  height: 100vh;
+}
+
+.sidebar-menu {
+  position: fixed;
+  width: 30%;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.sidebar-menu #navbar {
+  width: 90%;
+  height: 90%;
+  margin: 5px auto;
+}
+
+.sidebar-menu #navbar .title {
+  width: 100%;
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background: #fc7900;
+}
+
+.sidebar-menu #navbar .title header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-menu #navbar .title header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(255, 255, 255, 0.25)),
+    to(rgba(255, 255, 255, 0.1))
+  );
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+#logo {
+  position: relative;
+  width: 90%;
+  height: 80%;
+  margin: 10px 20px;
+  -webkit-animation: svg-animation 1s ease-in-out forwards 2.5s;
+  animation: svg-animation 1s ease-in-out forwards 2.5s;
+}
+
+#logo path {
+  -webkit-animation: letter-animation 2s ease-in-out forwards;
+  animation: letter-animation 2s ease-in-out forwards;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 407px;
+  stroke-dashoffset: 407px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 750px;
+  stroke-dashoffset: 750px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 432px;
+  stroke-dashoffset: 432px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 369px;
+  stroke-dashoffset: 369px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 259px;
+  stroke-dashoffset: 259px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+#logo path:nth-child(6) {
+  stroke-dasharray: 521px;
+  stroke-dashoffset: 521px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes letter-animation {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes letter-animation {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes svg-animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #ffffff;
+  }
+}
+
+@keyframes svg-animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #ffffff;
+  }
+}
+
+.sidebar-menu .navigation {
+  width: 100%;
+  height: calc(100% - 100px);
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sidebar-menu .navigation .nav-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10%;
+  font-size: 2.2rem;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid transparent;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(white),
+      to(white)
+    ),
+    -webkit-gradient(linear, left top, left bottom, from(#fc7900), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(white, white),
+    linear-gradient(#fc7900, rgba(255, 255, 255, 0));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 10px;
+  color: #4d4d4d;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidebar-menu .navigation .nav-link::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  background: #fc7900 -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.1)));
+  background: #fc7900
+    linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.1)
+    );
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sidebar-menu .navigation .nav-link:hover {
+  border: none;
+  letter-spacing: 1px;
+  -webkit-transform: translateY(-10%) scale(1.02);
+  transform: translateY(-10%) scale(1.02);
+  color: #ffffff;
+}
+
+.sidebar-menu .navigation .nav-link:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.content {
+  position: relative;
+  width: 70%;
+  margin-left: auto;
+  padding-top: 15px;
+}
+
+.content .main-section {
+  padding: 20px;
+  width: 95%;
+  height: 630px;
+  margin: 10px auto 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(white),
+      to(white)
+    ),
+    -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(255, 255, 255, 0.85)));
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.85)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.content .main-section header {
+  width: 40%;
+  height: 10%;
+  font-size: 3rem;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #fc7900;
+  cursor: default;
+}
+
+.content .main-section .data {
+  width: 100%;
+  height: 90%;
+  padding-top: 20px;
+}
+
+.content .main-section .data p {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 10px;
+  color: #4d4d4d;
+}
+
+.content .main-section .data h2 {
+  width: 40%;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.content .main-section .data ul {
+  width: 98%;
+  margin-left: auto;
+  color: #4d4d4d;
+}
+
+.content .main-section .data ul li {
+  line-height: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content .main-section .data ul li span {
+  color: black;
+}
+
+.content .main-section .data code {
+  padding: 5px;
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #4d4d4d;
+  background-color: rgba(50, 50, 50, 0.1);
+}
+
+.content .main-section .data span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.dev-detail {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dev-detail footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+  width: 50%;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: white;
+  background-color: #fc7900;
+}
+
+.dev-detail footer a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 1px 5px;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.dev-detail footer a:hover {
+  background-color: #ffffff;
+  color: #fc7900;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1023px) {
+  .sidebar-menu {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .sidebar-menu .navigation {
+    overflow: scroll;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .sidebar-menu .navigation .nav-link {
+    font-size: 2rem;
+    width: 90%;
+    height: 20%;
+    margin: 5% auto 0%;
+    border: 2px solid #fc7900;
+  }
+  .content {
+    width: 100%;
+    margin: 5% auto 0%;
+  }
+  .content .main-section {
+    height: 750px;
+  }
+  .content .main-section header {
+    width: 70%;
+    height: 7%;
+    line-height: 50px;
+  }
+  .content .main-section .data p {
+    font-size: 1.4rem;
+  }
+  .content .main-section .data h2 {
+    width: 60%;
+  }
+  .content .main-section .data ul li {
+    font-size: 1.3rem;
+  }
+  .content .main-section .data code {
+    font-size: 1.8rem;
+  }
+  .content .main-section .data span {
+    font-size: 1.4rem;
+  }
+  .dev-detail footer {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .sidebar-menu .navigation .nav-link {
+    font-size: 1.8rem;
+    line-height: 35px;
+    height: 12%;
+    margin: 5% auto 0%;
+  }
+  .content .main-section .data p {
+    font-size: 1.4rem;
+  }
+  .content .main-section .data h2 {
+    width: 60%;
+  }
+  .content .main-section .data ul li {
+    font-size: 1.3rem;
+  }
+  .content .main-section .data code {
+    font-size: 1.8rem;
+  }
+  .content .main-section .data span {
+    font-size: 1.4rem;
+  }
+  .dev-detail footer {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

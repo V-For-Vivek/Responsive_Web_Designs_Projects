@@ -1,0 +1,98 @@
+@media only screen and (min-width: 480px) and (max-width: 1023px) {
+    .sidebar-menu {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        .navigation {
+            overflow: scroll;
+            justify-content: flex-start;
+
+            .nav-link {
+                font-size: 2rem;
+                width: 90%;
+                height: 20%;
+                margin: 5% auto 0%;
+                border: 2px solid $secondary-clr;
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        margin: 5% auto 0%;
+
+        .main-section {
+            height: 750px;
+
+            header {
+                width: 70%;
+                height: 7%;
+                line-height: 50px;
+            }
+
+            .data {
+                p {
+                    font-size: 1.4rem;
+                }
+                h2 {
+                    width: 60%;
+                }
+                ul li {
+                    font-size: 1.3rem;
+                }
+                code {
+                    font-size: 1.8rem;
+                }
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .dev-detail {
+        footer {
+            width: 70%;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .sidebar-menu .navigation .nav-link {
+        font-size: 1.8rem;
+        line-height: 35px;
+        height: 12%;
+        margin: 5% auto 0%;
+    }
+
+    .content {
+        .main-section {
+            .data {
+                p {
+                    font-size: 1.4rem;
+                }
+                h2 {
+                    width: 60%;
+                }
+                ul li {
+                    font-size: 1.3rem;
+                }
+                code {
+                    font-size: 1.8rem;
+                }
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .dev-detail {
+        footer {
+            font-size: 1.5rem;
+        }
+    }
+}

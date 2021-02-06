@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$primary-clr: #ffffff;
+$secondary-clr: #fc7900;
+$ternary-clr: #4d4d4d;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.7%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins;
+}
+
+@import "sidebar-menu";
+@import "content";
+@import "dev-detail";
+@import "responcive";

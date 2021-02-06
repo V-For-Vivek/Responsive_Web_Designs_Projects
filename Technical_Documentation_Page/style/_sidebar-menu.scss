@@ -1,0 +1,156 @@
+.sidebar-menu {
+    position: fixed;
+    width: 30%;
+    height: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    #navbar {
+        width: 90%;
+        height: 90%;
+        margin: 5px auto;
+
+        .title {
+            width: 100%;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: $secondary-clr;
+
+            header {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+                }
+            }
+        }
+    }
+}
+
+#logo {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    margin: 10px 20px;
+    animation: svg-animation 1s ease-in-out forwards 2.5s;
+
+    path {
+        animation: letter-animation 2s ease-in-out forwards;
+        &:nth-child(1) {
+            stroke-dasharray: 407px;
+            stroke-dashoffset: 407px;
+            animation-delay: 0s;
+        }
+        &:nth-child(2) {
+            stroke-dasharray: 750px;
+            stroke-dashoffset: 750px;
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+            stroke-dasharray: 432px;
+            stroke-dashoffset: 432px;
+            animation-delay: 0.4s;
+        }
+        &:nth-child(4) {
+            stroke-dasharray: 369px;
+            stroke-dashoffset: 369px;
+            animation-delay: 0.6s;
+        }
+        &:nth-child(5) {
+            stroke-dasharray: 259px;
+            stroke-dashoffset: 259px;
+            animation-delay: 0.8s;
+        }
+        &:nth-child(6) {
+            stroke-dasharray: 521px;
+            stroke-dashoffset: 521px;
+            animation-delay: 1s;
+        }
+
+        @keyframes letter-animation {
+            to {
+                stroke-dashoffset: 0px;
+            }
+        }
+    }
+
+    @keyframes svg-animation {
+        from {
+            fill: transparent;
+        }
+        to {
+            fill: #ffffff;
+        }
+    }
+}
+
+.sidebar-menu .navigation {
+    width: 100%;
+    height: calc(100% - 100px);
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .nav-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 10%;
+        font-size: 2.2rem;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid transparent;
+        background-image: linear-gradient(white, white), linear-gradient(rgba(252, 121, 0, 1), rgba(255, 255, 255, 0));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        border-radius: 10px;
+        color: $ternary-clr;
+        z-index: 2;
+        transition: 0.3s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            background: $secondary-clr
+                linear-gradient(to bottom right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        &:hover {
+            border: none;
+            letter-spacing: 1px;
+            transform: translateY(-10%) scale(1.02);
+            color: $primary-clr;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.5s;
+        }
+    }
+}

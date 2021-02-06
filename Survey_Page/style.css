@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, cursive;
+  background-image: url("SurveyBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-color: rgba(0, 0, 150, 0.5);
+  background-blend-mode: lighten;
+}
+
+.page-title {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  flex-direction: column;
+  margin: 0em auto 1em;
+}
+
+.page-title h1 {
+  margin: 0.5em auto 0em;
+  font-size: 3.5em;
+  letter-spacing: 5px;
+}
+.page-title p {
+  font-size: 1.1em;
+  font-style: italic;
+  word-spacing: 5px;
+  margin: 0em auto 1em;
+}
+
+.content {
+  margin: 1em 0em 0em;
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+#survey-form {
+  display: flex;
+  width: 80%;
+  border-radius: inherit;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 1em 2em 0.5em;
+  margin: 0em auto;
+}
+
+#survey-form .form-group {
+  width: 95%;
+  margin-top: 1em;
+  padding: 0.5em 1em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#survey-form .form-group label {
+  margin: 0em 0em 0em;
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  padding: 0.2em 0.5em 0.2em;
+}
+
+#survey-form .form-group input,
+select,
+textarea {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  border-radius: 2px;
+  border: none;
+  padding: 0.2em 0.5em 0.2em;
+}
+
+#survey-form .form-group textarea {
+  resize: none;
+}
+
+#survey-form button {
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: none;
+  margin: 1em 0em 1em;
+  padding: 0.2em 0.5em 0.2em;
+}
+
+.dev-detail {
+  width: 100%;
+  height: 10%;
+  text-align: right;
+}
+
+.dev-detail a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  margin-left: 0.3em;
+  margin-right: 0.5em;
+  transition: 1s;
+}
+
+.dev-detail a:hover {
+  transform: rotateX(360deg);
+  color: #fd0;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .page-title {
+    margin: 1em 0em 1em;
+    font-size: 0.8em;
+  }
+
+  .content {
+    margin: 1em 0em 0em;
+    font-size: 0.8em;
+  }
+  #survey-form {
+    width: 100%;
+  }
+
+  .dev-detail {
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .page-title {
+    margin: 1em 5em 1em;
+    font-size: 1em;
+  }
+
+  .content {
+    margin: 5em 5em 0em;
+    font-size: 1em;
+  }
+
+  .dev-detail {
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .page-title {
+    margin: 1em 10em 1em;
+    font-size: 1.4em;
+  }
+
+  .content {
+    margin: 5em 10em 0em;
+    font-size: 1.2em;
+  }
+
+  .dev-detail {
+    margin-top: 2em;
+  }
+}
