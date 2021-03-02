@@ -1,0 +1,75 @@
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #about {
+        height: 160vh;
+        .about-content {
+            flex-direction: column;
+            justify-content: flex-start;
+            .content {
+                .info {
+                    align-items: center;
+                    .my-info {
+                        padding: 0 0 0 20px;
+                    }
+                }
+                .progress {
+                    margin: 0 auto;
+                    gap: 30px;
+                }
+                .links {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    #projects {
+        .project-content {
+            .project-tile {
+                .data {
+                    width: 80%;
+                    a {
+                        label {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #about {
+        .about-content {
+            .content {
+                gap: 20px;
+                .info {
+                    .title {
+                        font-size: 3.5rem;
+                    }
+                    .my-info {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    #about {
+        .about-content {
+            .content {
+                gap: 30px;
+                .info {
+                    gap: 0px;
+                    .title {
+                        font-size: 3.8rem;
+                    }
+                    .my-info {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
